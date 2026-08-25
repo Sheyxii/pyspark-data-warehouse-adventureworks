@@ -1,0 +1,20 @@
+# Core PySpark
+pyspark==3.5.1
+
+# Delta Lake (optional — uncomment if you decide to use Delta tables
+# instead of plain Parquet for the Bronze/Silver/Gold layers)
+# delta-spark==3.2.0
+
+# Data handling / EDA (used mainly in notebooks/exploration.ipynb)
+pandas==2.2.2
+matplotlib==3.9.0
+seaborn==0.13.2
+
+# Notebook environment
+jupyter==1.0.0
+
+# Testing / data quality checks
+pytest==8.2.2
+
+# Config/env management
+python-dotenv==1.0.1
