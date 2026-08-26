@@ -29,6 +29,10 @@ def get_spark_session(app_name: str = "AdventureWorksDW") -> SparkSession:
         .master("local[*]")  # use all local cores; change for cluster deployment
         .config("spark.sql.shuffle.partitions", "4")  # lower default for local/small data
         .config("spark.sql.session.timeZone", "UTC")
+        .config(
+            "spark.jars.packages",
+            "com.microsoft.sqlserver:mssql-jdbc:13.4.0.jre11"
+        )
         # Uncomment the two lines below if/when the project adopts Delta Lake:
         # .config("spark.jars.packages", "io.delta:delta-spark_2.12:3.2.0")
         # .config("spark.sql.extensions", "io.delta.sql.DeltaSparkSessionExtension")
